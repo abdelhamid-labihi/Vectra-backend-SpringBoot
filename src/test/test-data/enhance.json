@@ -1,0 +1,7 @@
+{
+  "soft_skills":["soft_skill_1", "soft_skill_2"],
+  "hard_skills":["hard_skill_1", "hard_skill_2"],
+  "job_title":"job_Test",
+  "company":"company_test",
+  "enhance":true
+}

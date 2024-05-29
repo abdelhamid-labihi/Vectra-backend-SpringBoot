@@ -1,0 +1,35 @@
+{
+  "name" : "User_Test",
+  "email" : "user@gmail.com",
+  "phone" : "+212 601010101",
+  "linkedin" : "",
+  "skills" : [ "HTML", "CSS", "JavaScript", "Bootstrap", "Tailwind", "Node.js", "Express", "React.js", "Material UI", "JWT", "Spring Boot", "Angular", "Java", "C", "SQL", "MongoDB", "UML", "Merise", "Git", "GitHub" ],
+  "experience" : [ {
+    "job_title" : "Data Analyst Intern",
+    "company" : "TE Connectivity",
+    "description" : [ "Analyzed paper consumption statistics across all departments and processes.", "Led development of a Salesforce Tableau dashboard summarizing key results of the analysis.", "Identified cost saving opportunities" ]
+  }, {
+    "job_title" : "Software Engineering Intern",
+    "company" : "1337 Future is Loading",
+    "description" : [ "Created a living space co- ownership application for facilitating shared arrangements.", "Built using React, Next.js, Prisma ORM, MySQL and Autho." ]
+  } ],
+  "education" : [ {
+    "degree" : "Diplôme d'Études Universitaires Générales",
+    "major" : "",
+    "university" : "Ecole Normale de l'enseignement technique ( ENSET )",
+    "startDate" : "2019-01-01",
+    "endDate" : "2022-01-01",
+    "years" : "2019 - 2022"
+  } ],
+  "languages" : [ {
+    "language" : "ARA",
+    "level" : "Fluent"
+  }, {
+    "language" : "FRA",
+    "level" : "Intermediate"
+  }, {
+    "language" : "ENG",
+    "level" : "Intermediate"
+  } ],
+  "softSkills" : [ "Communication", "Teamwork" ]
+}

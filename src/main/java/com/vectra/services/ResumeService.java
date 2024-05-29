@@ -1,6 +1,5 @@
 package com.vectra.services;
 
-import com.vectra.models.SkillsResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.*;
 import org.springframework.stereotype.Service;
@@ -8,9 +7,6 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.web.client.HttpStatusCodeException;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.client.HttpStatusCodeException;
-
-
 
 import java.io.File;
 import java.io.IOException;
@@ -28,17 +24,15 @@ public class ResumeService {
     private JsonFileService jsonFileService;
 
 
-    public void saveResume(String resumeJson, String username) {
+    public void saveResume(String resumeJson, String username) throws IOException {
         String dirPath = "./resumes";
         String filePath = dirPath + "/" + username + ".json";
 
-        // Create the directory if it doesn't exist
-        File directory = new File(dirPath);
-        if (!directory.exists()) {
-            directory.mkdir();
-        }
+        ObjectMapper mapper = new ObjectMapper();
+        Object json = mapper.readValue(resumeJson, Object.class);
+        String prettyJson = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(json);
 
-        jsonFileService.writeJsonToFile(filePath, resumeJson);
+        Files.write(Paths.get(filePath), prettyJson.getBytes());
     }
 
 
@@ -50,7 +44,15 @@ public class ResumeService {
         ObjectMapper mapper = new ObjectMapper();
         Map<String, Object> resume = mapper.readValue(resumeJson, Map.class);
 
-        return (List<String>) resume.get("skills");
+        List<String> skills = new ArrayList<>();
+        if (resume.get("skills") != null) {
+            skills.addAll((List<String>) resume.get("skills"));
+        }
+        if (resume.get("softSkills") != null) {
+            skills.addAll((List<String>) resume.get("softSkills"));
+        }
+
+        return skills;
     }
 
 
@@ -77,7 +79,7 @@ public class ResumeService {
 
             // Calculate the matching percentage
             int totalSkills = skills.size();
-            int missedSkills = ((List<String>)result.get("technical_skills")).size() + ((List<String>)result.get("soft_skills")).size();
+            int missedSkills = ((List<String>)result.get("technical_skills_missing")).size() + ((List<String>)result.get("soft_skills_missing")).size();
             double matchingPercentage = (double)totalSkills / (totalSkills + missedSkills) * 100;
 
             List<String> matchList = new ArrayList<>();
@@ -127,30 +129,37 @@ public class ResumeService {
         Map<String, Object> resume = mapper.readValue(resumeJson, Map.class);
 
         // Replace the skills with the final skills from the enhancement details
-        resume.put("soft_skills", enhancementDetails.get("soft_skills"));
-        resume.put("hard_skills", enhancementDetails.get("hard_skills"));
+        resume.put("softSkills", enhancementDetails.get("soft_skills"));
+        resume.put("skills", enhancementDetails.get("hard_skills"));
 
         // Get the experiences from the existing resume
-        List<Map<String, Object>> existingExperiences = (List<Map<String, Object>>) resume.get("experience");
 
-        // Call the /enhance_experience endpoint with the existing experiences to get the enhanced descriptions
-        List<String> enhancedDescriptions = enhanceExperience(existingExperiences);
 
-        // Replace the descriptions in the existing experiences with the enhanced descriptions
-        for (int i = 0; i < existingExperiences.size(); i++) {
-            existingExperiences.get(i).put("description", enhancedDescriptions.get(i));
+        // Check if the "enhance" attribute in enhancementDetails is true
+        if (Boolean.TRUE.equals(enhancementDetails.get("enhance"))) {
+            List<Map<String, Object>> existingExperiences = (List<Map<String, Object>>) resume.get("experience");
+
+            // Call the /enhance_experience endpoint with the existing experiences to get the enhanced descriptions
+            List<String> enhancedDescriptions = enhanceExperience(existingExperiences);
+
+            // Replace the descriptions in the existing experiences with the enhanced descriptions
+            for (int i = 0; i < existingExperiences.size(); i++) {
+                existingExperiences.get(i).put("description", enhancedDescriptions.get(i));
+            }
         }
 
         // Convert the updated resume to JSON
         String newResumeJson = mapper.writeValueAsString(resume);
 
         // Generate the new filename
-        // Generate the new filename
         String jobTitle = ((String) enhancementDetails.get("job_title")).replace(" ", "_");
         String companyName = ((String) enhancementDetails.get("company")).replace(" ", "_");
         String newUsername = username + "_" + jobTitle + "_" + companyName;
+
         // Save the new resume
         saveResume(newResumeJson, newUsername);
     }
+
+
 
 }

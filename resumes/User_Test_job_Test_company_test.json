@@ -1,0 +1,35 @@
+{
+  "name" : "User_Test",
+  "email" : "user@gmail.com",
+  "phone" : "+212 601010101",
+  "linkedin" : "",
+  "skills" : [ "hard_skill_1", "hard_skill_2" ],
+  "experience" : [ {
+    "job_title" : "Data Analyst Intern",
+    "company" : "TE Connectivity",
+    "description" : "Analyzed paper consumption statistics across all departments and processes, identifying usage patterns and inefficiencies.\\nLed the development of a Salesforce Tableau dashboard, effectively summarizing key results and insights from the analysis.\\nIdentified cost-saving opportunities, contributing to more efficient resource utilization."
+  }, {
+    "job_title" : "Software Engineering Intern",
+    "company" : "1337 Future is Loading",
+    "description" : "Developed a living space co-ownership application to facilitate shared arrangements, enhancing user experience and functionality.\\nBuilt the application using React, Next.js, Prisma ORM, MySQL, and Auth0, ensuring a robust and secure platform."
+  } ],
+  "education" : [ {
+    "degree" : "Diplôme d'Études Universitaires Générales",
+    "major" : "",
+    "university" : "Ecole Normale de l'enseignement technique ( ENSET )",
+    "startDate" : "2019-01-01",
+    "endDate" : "2022-01-01",
+    "years" : "2019 - 2022"
+  } ],
+  "languages" : [ {
+    "language" : "ARA",
+    "level" : "Fluent"
+  }, {
+    "language" : "FRA",
+    "level" : "Intermediate"
+  }, {
+    "language" : "ENG",
+    "level" : "Intermediate"
+  } ],
+  "softSkills" : [ "soft_skill_1", "soft_skill_2" ]
+}
