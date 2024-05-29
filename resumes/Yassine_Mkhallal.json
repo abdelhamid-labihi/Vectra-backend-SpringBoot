@@ -1,0 +1,433 @@
+{
+  "address": {
+    "bounding_box": null,
+    "confidence": 0,
+    "polygon": [],
+    "raw_value": null,
+    "reconstructed": false,
+    "value": "Mohammedia, Casablanca - Settat, Morocco"
+  },
+  "certificates": [
+    {
+      "bounding_box": null,
+      "confidence": 0,
+      "grade": null,
+      "name": "Object-Oriented Design",
+      "polygon": [],
+      "provider": "University of Alberta",
+      "year": null
+    },
+    {
+      "bounding_box": null,
+      "confidence": 0,
+      "grade": null,
+      "name": "Labs - DevOps Pre-Requisite Course",
+      "polygon": [],
+      "provider": "KodKloud",
+      "year": null
+    },
+    {
+      "bounding_box": null,
+      "confidence": 0,
+      "grade": null,
+      "name": "Getting Started with Linux Fundamentals (RH104)",
+      "polygon": [],
+      "provider": "Red Hat",
+      "year": null
+    },
+    {
+      "bounding_box": null,
+      "confidence": 0,
+      "grade": null,
+      "name": "Essentiel Networking",
+      "polygon": [],
+      "provider": "Cisco",
+      "year": null
+    },
+    {
+      "bounding_box": null,
+      "confidence": 0,
+      "grade": null,
+      "name": "MongoDB Node.js Developer Path",
+      "polygon": [],
+      "provider": "MongoDB",
+      "year": null
+    }
+  ],
+  "document_language": {
+    "bounding_box": null,
+    "confidence": 0,
+    "polygon": [],
+    "raw_value": null,
+    "reconstructed": false,
+    "value": "ENG"
+  },
+  "document_type": {
+    "confidence": 0,
+    "reconstructed": false,
+    "value": "RESUME"
+  },
+  "education": [
+    {
+      "bounding_box": null,
+      "confidence": 0,
+      "degree_domain": null,
+      "degree_type": "Diploma of General University Studies (DEUG)",
+      "end_month": "Present",
+      "end_year": "2022",
+      "polygon": [],
+      "school": "Ecole Normale de l'enseignement technique",
+      "start_month": null,
+      "start_year": null
+    }
+  ],
+  "email_address": {
+    "bounding_box": null,
+    "confidence": 0,
+    "polygon": [],
+    "raw_value": null,
+    "reconstructed": false,
+    "value": "yassinemkhallal@gmail.com"
+  },
+  "given_names": [
+    {
+      "bounding_box": null,
+      "confidence": 0,
+      "polygon": [],
+      "raw_value": null,
+      "reconstructed": false,
+      "value": "Yassine"
+    }
+  ],
+  "hard_skills": [
+    {
+      "bounding_box": null,
+      "confidence": 0,
+      "polygon": [],
+      "raw_value": null,
+      "reconstructed": false,
+      "value": "HTML"
+    },
+    {
+      "bounding_box": null,
+      "confidence": 0,
+      "polygon": [],
+      "raw_value": null,
+      "reconstructed": false,
+      "value": "CSS"
+    },
+    {
+      "bounding_box": null,
+      "confidence": 0,
+      "polygon": [],
+      "raw_value": null,
+      "reconstructed": false,
+      "value": "JavaScript"
+    },
+    {
+      "bounding_box": null,
+      "confidence": 0,
+      "polygon": [],
+      "raw_value": null,
+      "reconstructed": false,
+      "value": "Bootstrap"
+    },
+    {
+      "bounding_box": null,
+      "confidence": 0,
+      "polygon": [],
+      "raw_value": null,
+      "reconstructed": false,
+      "value": "Tailwind"
+    },
+    {
+      "bounding_box": null,
+      "confidence": 0,
+      "polygon": [],
+      "raw_value": null,
+      "reconstructed": false,
+      "value": "Node.js"
+    },
+    {
+      "bounding_box": null,
+      "confidence": 0,
+      "polygon": [],
+      "raw_value": null,
+      "reconstructed": false,
+      "value": "Express"
+    },
+    {
+      "bounding_box": null,
+      "confidence": 0,
+      "polygon": [],
+      "raw_value": null,
+      "reconstructed": false,
+      "value": "React.js"
+    },
+    {
+      "bounding_box": null,
+      "confidence": 0,
+      "polygon": [],
+      "raw_value": null,
+      "reconstructed": false,
+      "value": "Material UI"
+    },
+    {
+      "bounding_box": null,
+      "confidence": 0,
+      "polygon": [],
+      "raw_value": null,
+      "reconstructed": false,
+      "value": "JWT"
+    },
+    {
+      "bounding_box": null,
+      "confidence": 0,
+      "polygon": [],
+      "raw_value": null,
+      "reconstructed": false,
+      "value": "Spring Boot"
+    },
+    {
+      "bounding_box": null,
+      "confidence": 0,
+      "polygon": [],
+      "raw_value": null,
+      "reconstructed": false,
+      "value": "Angular"
+    },
+    {
+      "bounding_box": null,
+      "confidence": 0,
+      "polygon": [],
+      "raw_value": null,
+      "reconstructed": false,
+      "value": "Java"
+    },
+    {
+      "bounding_box": null,
+      "confidence": 0,
+      "polygon": [],
+      "raw_value": null,
+      "reconstructed": false,
+      "value": "C"
+    },
+    {
+      "bounding_box": null,
+      "confidence": 0,
+      "polygon": [],
+      "raw_value": null,
+      "reconstructed": false,
+      "value": "SQL"
+    },
+    {
+      "bounding_box": null,
+      "confidence": 0,
+      "polygon": [],
+      "raw_value": null,
+      "reconstructed": false,
+      "value": "MongoDB"
+    },
+    {
+      "bounding_box": null,
+      "confidence": 0,
+      "polygon": [],
+      "raw_value": null,
+      "reconstructed": false,
+      "value": "UML"
+    },
+    {
+      "bounding_box": null,
+      "confidence": 0,
+      "polygon": [],
+      "raw_value": null,
+      "reconstructed": false,
+      "value": "Merise"
+    },
+    {
+      "bounding_box": null,
+      "confidence": 0,
+      "polygon": [],
+      "raw_value": null,
+      "reconstructed": false,
+      "value": "Git"
+    },
+    {
+      "bounding_box": null,
+      "confidence": 0,
+      "polygon": [],
+      "raw_value": null,
+      "reconstructed": false,
+      "value": "GitHub"
+    }
+  ],
+  "job_applied": {
+    "bounding_box": null,
+    "confidence": 0,
+    "polygon": [],
+    "raw_value": null,
+    "reconstructed": false,
+    "value": null
+  },
+  "languages": [
+    {
+      "bounding_box": null,
+      "confidence": 0,
+      "language": "ARA",
+      "level": "Fluent",
+      "polygon": []
+    },
+    {
+      "bounding_box": null,
+      "confidence": 0,
+      "language": "FRA",
+      "level": "Intermediate",
+      "polygon": []
+    },
+    {
+      "bounding_box": null,
+      "confidence": 0,
+      "language": "ENG",
+      "level": "Intermediate",
+      "polygon": []
+    }
+  ],
+  "nationality": {
+    "bounding_box": null,
+    "confidence": 0,
+    "polygon": [],
+    "raw_value": null,
+    "reconstructed": false,
+    "value": "MAR"
+  },
+  "phone_number": {
+    "bounding_box": null,
+    "confidence": 0,
+    "polygon": [],
+    "raw_value": null,
+    "reconstructed": false,
+    "value": "+212693749838"
+  },
+  "profession": {
+    "bounding_box": null,
+    "confidence": 0,
+    "polygon": [],
+    "raw_value": null,
+    "reconstructed": false,
+    "value": "Software engineer"
+  },
+  "professional_experiences": [
+    {
+      "bounding_box": null,
+      "confidence": 0,
+      "contract_type": null,
+      "department": null,
+      "employer": "Menara Holding",
+      "end_month": null,
+      "end_year": "Août 2023",
+      "polygon": [],
+      "role": "Full Stack Developer",
+      "start_month": null,
+      "start_year": "Juin 2023"
+    }
+  ],
+  "social_networks_urls": [
+    {
+      "bounding_box": null,
+      "confidence": 0,
+      "name": "LinkedIn",
+      "polygon": [],
+      "url": null
+    },
+    {
+      "bounding_box": null,
+      "confidence": 0,
+      "name": "Instagram",
+      "polygon": [],
+      "url": null
+    },
+    {
+      "bounding_box": null,
+      "confidence": 0,
+      "name": "website",
+      "polygon": [],
+      "url": null
+    },
+    {
+      "bounding_box": null,
+      "confidence": 0,
+      "name": "GitHub",
+      "polygon": [],
+      "url": null
+    }
+  ],
+  "soft_skills": [
+    {
+      "bounding_box": null,
+      "confidence": 0,
+      "polygon": [],
+      "raw_value": null,
+      "reconstructed": false,
+      "value": "Communication"
+    },
+    {
+      "bounding_box": null,
+      "confidence": 0,
+      "polygon": [],
+      "raw_value": null,
+      "reconstructed": false,
+      "value": "Teamwork"
+    }
+  ],
+  "surnames": [
+    {
+      "bounding_box": null,
+      "confidence": 0,
+      "polygon": [],
+      "raw_value": null,
+      "reconstructed": false,
+      "value": "Mkhallal"
+    }
+  ],
+  "skills": [
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "Bootstrap",
+    "Tailwind",
+    "Node.js",
+    "Express",
+    "React.js",
+    "Material UI",
+    "JWT",
+    "Spring Boot",
+    "Angular",
+    "Java",
+    "C",
+    "SQL",
+    "MongoDB",
+    "UML",
+    "Merise",
+    "Git",
+    "GitHub",
+    "Communication",
+    "Teamwork"
+  ],
+  "experience": [
+    {
+      "job_title": "Data Analyst Intern",
+      "company": "TE Connectivity",
+      "description": [
+        "Analyzed paper consumption statistics across all departments and processes.",
+        "Led development of a Salesforce Tableau dashboard summarizing key results of the analysis.",
+        "Identified cost saving opportunities"
+      ]},
+    {
+      "job_title": "Software Engineering Intern",
+      "company": "1337 Future is Loading",
+      "description": [
+        "Created a living space co- ownership application for facilitating shared arrangements.",
+        "Built using React, Next.js, Prisma ORM, MySQL and Autho."
+      ]}
+  ]
+}
