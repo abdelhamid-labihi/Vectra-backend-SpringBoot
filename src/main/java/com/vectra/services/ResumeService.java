@@ -119,7 +119,7 @@ public class ResumeService {
         }
     }
 
-    public void enhanceResume(String username, Map<String, Object> enhancementDetails) throws IOException {
+    public ResponseEntity<InputStreamResource> enhanceResume(String username, Map<String, Object> enhancementDetails) throws IOException {
         // Retrieve the existing resume
         String dirPath = "./resumes";
         String filePath = dirPath + "/" + username + ".json";
@@ -158,6 +158,36 @@ public class ResumeService {
 
         // Save the new resume
         saveResume(newResumeJson, newUsername);
+
+        String jobTitle = enhancementDetails.get("job_title").replace(" ", "_");
+        String companyName = enhancementDetails.get("company").replace(" ", "_");
+        String filename = username + "_" + jobTitle + "_" + companyName + ".pdf";
+
+        // Call the method to convert the JSON resume to the requested format and store it
+        // This method is not implemented in this example
+        // convertAndStoreResume(filename);
+
+        // Get the file from the resumes directory
+        File file = new File("./resumes/" + filename);
+
+        try {
+            InputStreamResource resource = new InputStreamResource(new FileInputStream(file));
+
+            // Determine the content type
+            String contentType = "application/octet-stream";
+            if ("pdf".equals(format)) {
+                contentType = "application/pdf";
+            } else if ("latex".equals(format)) {
+                contentType = "application/x-latex";
+            }
+
+            return ResponseEntity.ok()
+                    .contentType(MediaType.parseMediaType(contentType))
+                    .body(resource);
+        } catch (FileNotFoundException e) {
+            System.out.println("Error occurred while downloading resume: " + e.getMessage());
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
+        }
     }
 
 
